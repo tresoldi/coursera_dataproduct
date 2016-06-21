@@ -1,66 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AC Heat Load Prediction</title>
-  <meta charset="utf-8">
-  <meta name="description" content="AC Heat Load Prediction">
-  <meta name="author" content="Tiago Tresoldi">
-  <meta name="generator" content="slidify" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
-    media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
-
+	<meta charset='utf-8'>
+	<title>AC Heat Load Prediction</title>
+	<meta name="description" content="AC Heat Load Prediction">
+	<meta name="author" content="Tiago Tresoldi">
+	<meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />  <link rel="stylesheet" href = "assets/css/ribbons.css">
   
-  <!-- Grab CDN jQuery, fall back to local if offline -->
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
-  <script data-main="libraries/frameworks/io2012/js/slides" 
-    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
-  </script>
-  
-  
-
 </head>
-<body style="opacity: 0">
-  <slides class="layout-widescreen">
-    
-    <!-- LOGO SLIDE -->
-        <slide class="title-slide segue nobackground">
-  <hgroup class="auto-fadein">
-    <h1>AC Heat Load Prediction</h1>
-    <h2>Applying a Rule-of-Thumb</h2>
-    <p>Tiago Tresoldi<br/></p>
-  </hgroup>
-  <article></article>  
-</slide>
-    
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+     <article class="" id="slide-1" style="background:;">
+  <h3>AC Heat Load Prediction</h3>
+  <h3>Applying a Rule-of-Thumb</h3>
 
-    <!-- SLIDES -->
-    <slide class="" id="slide-1" style="background:;">
-  <hgroup>
-    <h2>What</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
+<p>Tiago Tresoldi</p>
+
+</article>
+
+<article class="" id="slide-2" style="background:;">
+  <h3>What</h3>
+  <ul>
 <li><p>An extremely simple, and hardly useful, R-Shiny web application that demonstrates how we can easily create public and interactive applications using R that don&#39;t require any software installation by the user.</p></li>
 <li><p>The application uses a rule-of-thumb commonly used in Southern Brazil to predict, based exclusively in the area of a room, the heat load for air conditioning in domestic environments.</p></li>
 </ul>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+</article>
 
-<slide class="" id="slide-2" style="background:;">
-  <hgroup>
-    <h2>How</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>The model is extremely simple, assuming a linear relation between room area and heat load, with a reference value of 1 TR (12,000 BTUs) per 20 square meters room. The results are acceptable for dometic rooms in Brazil; 20% is sometimes added to the model output (large windows, high mean number of people, etc.).</p>
+<article class="" id="slide-3" style="background:;">
+  <h3>How</h3>
+  <p>The model is extremely simple, assuming a linear relation between room area and heat load, with a reference value of 1 TR (12,000 BTUs) per 20 square meters room. The results are acceptable for dometic rooms in Brazil; 20% is sometimes added to the model output (large windows, high mean number of people, etc.).</p>
 
 <p>The model is reproduced in the code below, with the output for 20 and 30 m2:</p>
 
@@ -77,80 +50,34 @@ heatloadPred(20.0)
 <pre><code>## [1] 18000
 </code></pre>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+</article>
 
-<slide class="" id="slide-3" style="background:;">
-  <hgroup>
-    <h2>Tools</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
+<article class="" id="slide-4" style="background:;">
+  <h3>Tools</h3>
+  <ul>
 <li><p>The base of the application is an R code, run with the <em>shiny</em> library and hosted on <em>shinyapps.io</em> at the url <a href="https://tresoldi.shinyapps.io/dataproduct/">https://tresoldi.shinyapps.io/dataproduct/</a></p></li>
 <li><p>This presentation is written in R Markdown and compiled with the <em>slidify</em> library.</p></li>
 <li><p>The source for both the application and the presentation is hosted on GitHub, at <a href="https://github.com/tresoldi/coursera_dataproduct">https://github.com/tresoldi/coursera_dataproduct</a></p></li>
 </ul>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+</article>
 
-<slide class="" id="slide-4" style="background:;">
-  <hgroup>
-    <h2>Future work</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
+<article class="" id="slide-5" style="background:;">
+  <h3>Future work</h3>
+  <ul>
 <li><p>Better documentation and interface, make the user interface less ugly</p></li>
 <li><p>Extend the web application, for example allowing the user to specify a higher than standard load with a check box, which would add 20% to the model result</p></li>
 </ul>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+</article>
 
-    <slide class="backdrop"></slide>
-  </slides>
-  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
-    <ul>
-      <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='What'>
-         1
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='How'>
-         2
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Tools'>
-         3
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Future work'>
-         4
-      </a>
-    </li>
-  </ul>
-  </div>  <!--[if IE]>
-    <script 
-      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
-    </script>
-    <script>CFInstall.check({mode: 'overlay'});</script>
-  <![endif]-->
+  </section>
 </body>
-  <!-- Load Javascripts for Widgets -->
-  
-  <!-- LOAD HIGHLIGHTER JS FILES -->
-  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
-   
-  </html>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
+	<!-- LOAD HIGHLIGHTER JS FILES -->
+	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+	 
+	</html>

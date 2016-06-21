@@ -3,12 +3,20 @@ title       : AC Heat Load Prediction
 subtitle    : Applying a Rule-of-Thumb
 author      : Tiago Tresoldi
 job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+framework   : html5slides   # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+---
+
+## AC Heat Load Prediction
+
+### Applying a Rule-of-Thumb
+
+Tiago Tresoldi
+
 ---
 
 ## What
